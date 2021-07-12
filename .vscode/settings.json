@@ -1,0 +1,6 @@
+{
+  "cSpell.words": ["linkedin", "noopener", "noreferrer"],
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  }
+}
