@@ -1,42 +1,17 @@
 import "./styles/style.css";
+
 import Nav from "./components/Nav";
+import Header from "./components/Header";
+import About from "./components/About";
+import Services from "./components/Services";
 
 const App = () => {
   return (
     <div>
       <Nav />
-
-      <h1>Hello there1</h1>
-      <h1>Hello there</h1>
-      <h1>Hello there</h1>
-      <h1>Hello there</h1>
-      <h1>Hello there</h1>
-      <h1>Hello there</h1>
-      <h1>Hello there</h1>
-      <h1>Hello there</h1>
-      <h1>Hello there</h1>
-      <h1>Hello there</h1>
-      <h1>Hello there</h1>
-      <h1>Hello there</h1>
-      <h1>Hello there</h1>
-      <h1>Hello there</h1>
-      <h1>Hello there</h1>
-      <h1>Hello there</h1>
-      <h1>Hello there</h1>
-      <h1>Hello there</h1>
-      <h1>Hello there</h1>
-      <h1>Hello there</h1>
-      <h1>Hello there</h1>
-      <h1>Hello there</h1>
-      <h1>Hello there</h1>
-      <h1>Hello there</h1>
-      <h1>Hello there</h1>
-      <h1>Hello there</h1>
-      <h1>Hello there</h1>
-      <h1>Hello there</h1>
-      <h1>Hello there</h1>
-      <h1>Hello there</h1>
-      <h1>Hello there</h1>
+      <Header />
+      <About />
+      <Services />
     </div>
   );
 };

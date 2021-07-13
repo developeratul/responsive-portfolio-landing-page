@@ -1,5 +1,26 @@
 {
-  "cSpell.words": ["linkedin", "noopener", "noreferrer"],
+  "cSpell.words": [
+    "Stratagy",
+    "accusantium",
+    "adipisicing",
+    "amet",
+    "autem",
+    "consectetur",
+    "corporis",
+    "dolor",
+    "elit",
+    "esse",
+    "fugiat",
+    "illum",
+    "linkedin",
+    "nam",
+    "non",
+    "noopener",
+    "noreferrer",
+    "quas",
+    "quia",
+    "randomised"
+  ],
   "[javascript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   }
