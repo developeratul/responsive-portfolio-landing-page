@@ -51,6 +51,10 @@ section {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .stickyNav {
   background: #000;
   padding: 10px 0;
@@ -59,6 +63,26 @@ section {
 .container {
   width: 1000px;
   margin: auto;
+}
+
+.top {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+  padding: 10px 15px;
+  border-radius: 100%;
+  background: #fff;
+  color: $themeColor;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 5px #000;
+  z-index: 10;
+  &:hover {
+    background: $themeColor;
+    color: #fff;
+  }
 }
 
 .section_title {
@@ -418,6 +442,129 @@ header {
   }
 }
 
+// the contact section
+.contact_section {
+  .contact_content_wrapper {
+    @include flex(center, center, stretch);
+    .contact_form {
+      width: 600px;
+      margin-right: 20px;
+      .contact_form_title {
+        margin-bottom: 30px;
+        h2 {
+          font-weight: 100;
+          font-family: Noto Sans;
+          font-size: 4rem;
+          margin-bottom: 10px;
+        }
+        p {
+          color: #9597a2;
+          span {
+            color: #fff;
+          }
+        }
+      }
+      .form {
+        width: 100%;
+        .single_field {
+          width: 100%;
+          margin: 10px 0;
+          input,
+          textarea {
+            width: 100%;
+            padding: 10px 20px;
+            background: none;
+            color: #9597a2;
+            border: 2px solid #9597a2;
+            border-radius: 5px;
+            font-size: 1.02rem;
+            resize: none;
+          }
+        }
+        .submit_button {
+          button {
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            background: $themeColor;
+            border: 2px solid $themeColor;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            &:hover {
+              background: none;
+              color: $themeColor;
+              transform: translateY(-3px);
+            }
+          }
+        }
+      }
+    }
+
+    .contact_img {
+      width: 500px;
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+// the footer section
+.footer_section {
+  padding: 20px 0;
+  @include flex(space-around, center, stretch);
+  .logo {
+    width: 70px;
+    img {
+      width: 100%;
+    }
+  }
+
+  .social_links {
+    @include flex(center, center, stretch);
+    li {
+      list-style: none;
+      margin: 0 10px;
+      a {
+        padding: 15px 21px;
+        border: 2px solid #9597a2;
+        border-radius: 100%;
+        color: #9597a2;
+        transition: 0.3s;
+        display: inline-block;
+        &:hover {
+          background: $themeColor;
+          color: #fff;
+          border-color: $themeColor;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    color: #9597a2;
+  }
+}
+
+@media screen and (max-width: 1210px) {
+  // the contact section
+  .contact_section {
+    .contact_content_wrapper {
+      .contact_form {
+        width: 500px;
+      }
+      .contact_img {
+        width: 400px;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .container {
     width: 700px;
@@ -494,6 +641,23 @@ header {
     .service_content_wrapper {
       .single_service {
         width: 330px;
+      }
+    }
+  }
+
+  // the contact section
+  .contact_section {
+    .contact_content_wrapper {
+      flex-direction: column-reverse;
+      .contact_form {
+        width: 500px;
+        margin-right: 0;
+        max-width: 95%;
+      }
+      .contact_img {
+        width: 500px;
+        margin-bottom: 20px;
+        max-width: 95%;
       }
     }
   }
@@ -596,6 +760,17 @@ header {
           }
         }
       }
+    }
+  }
+
+  // the footer section
+  .footer_section {
+    flex-direction: column;
+    .logo {
+      margin-bottom: 20px;
+    }
+    .social_links {
+      margin-bottom: 20px;
     }
   }
 }

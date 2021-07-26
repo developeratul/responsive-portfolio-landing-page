@@ -31,7 +31,6 @@ const Nav = () => {
           <li><a href="#about">About</a></li>
           <li><a href="#service">Services</a></li>
           <li><a href="#project">Projects</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
           <li> <a href="#blog">Blog</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -39,22 +38,22 @@ const Nav = () => {
 
       <div className="nav_right_content nav_content_container">
         <ul className="social_links nav_container_item nav_links">
-          <li><a href="#" target="_blank" rel="noopener noreferrer">
+          <li><a href="https://www.facebook.com/minhazurrahaman.ratul/" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-facebook-f"></i>
           </a></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer">
+          <li><a href="https://twitter.com/Ratul_devR" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-twitter"></i>
           </a></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer">
+          <li><a href="https://www.linkedin.com/in/developer-ratul-407352211/" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-linkedin-in"></i>
           </a></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer">
+          <li><a href="https://www.instagram.com/ratul9694/" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-instagram"></i>
           </a></li>
         </ul>
 
         <div className="contact_button nav_container_item">
-          <a href="#"><button>Let's Talk</button></a>
+          <a target="_blank" href="https://www.facebook.com/minhazurrahaman.ratul/"><button>Let's Talk</button></a>
         </div>
       </div>
 

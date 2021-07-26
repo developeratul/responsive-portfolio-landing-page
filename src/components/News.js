@@ -3,7 +3,7 @@ import NewsData from "../data/NewsData"
 
 const News = () => {
   return (
-    <section className="latest_news_section">
+    <section className="latest_news_section" id="blog">
       <SectionTitle
         title="Latest News"
         desc="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."

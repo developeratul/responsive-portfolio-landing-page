@@ -7,17 +7,21 @@ import Services from "./components/Services";
 import Projects from "./components/Projects";
 import News from "./components/News";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import Top from "./components/Top";
 
 const App = () => {
   return (
     <div>
+      <Top />
       <Nav />
       <Header />
       <About />
       <Services />
       <Projects />
       <News />
-      {/* <Contact /> */}
+      <Contact />
+      <Footer />
     </div>
   );
 };

@@ -3,7 +3,7 @@ import ProjectData from "../data/ProjectData"
 
 const Projects = () => {
   return (
-    <section className="projects_section">
+    <section className="projects_section" id="project">
       <SectionTitle
         title="My Latest Project"
         desc="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."

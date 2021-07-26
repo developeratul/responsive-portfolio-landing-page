@@ -3,7 +3,7 @@ import ServiceData from "../data/ServiceData"
 
 const Services = () => {
   return (
-    <section className="services_section">
+    <section className="services_section" id="service">
       <SectionTitle
         title="My Awesome Service"
         desc="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."
