@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Poppins:regular");
+@import url(https://fonts.googleapis.com/css?family=Poppins:regular);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:regular,italic,700,700italic);
 
 // mixin
 @mixin flex($justifyContent, $alignItems, $flexDirection) {
@@ -13,8 +13,8 @@
 // vars
 $themeColor: #f9004d;
 $themeSecondary: #f81f03;
-$bgColor: #101010;
-$bgSecondary: #191919;
+$bgColor: #191919;
+$bgSecondary: #101010;
 
 * {
   margin: 0;
@@ -32,7 +32,7 @@ a {
 }
 
 h1 {
-  font-family: Montserrat;
+  font-family: Noto Sans;
 }
 
 body {
@@ -42,7 +42,13 @@ body {
 }
 
 section {
-  padding: 50px 0px;
+  padding: 100px 0px;
+  &:nth-child(odd) {
+    background: $bgColor;
+  }
+  &:nth-child(even) {
+    background: $bgSecondary;
+  }
 }
 
 .stickyNav {
@@ -62,8 +68,11 @@ section {
   max-width: 100%;
   h2 {
     font-size: 3rem;
-    font-family: Montserrat;
-    margin-bottom: 5px;
+    font-family: Noto Sans;
+    margin-bottom: 10px;
+  }
+  p {
+    color: #9597a2;
   }
 }
 
@@ -181,7 +190,6 @@ header {
 
 // about section
 .about_section {
-  background: $bgSecondary;
   .about_section_content_wrapper {
     @include flex(space-between, center, stretch);
     .about_img {
@@ -230,21 +238,23 @@ header {
 
 // services section
 .services_section {
-  background: $bgColor;
   padding: 100px 0;
   .service_content_wrapper {
     @include flex(center, center, stretch);
     .single_service {
-      width: 320px;
+      width: 400px;
       margin: 5px;
-      padding: 50px 30px;
-      background: $bgSecondary;
-      border-radius: 5px;
+      padding: 50px 40px;
+      background: $bgColor;
+      border-radius: 10px;
       cursor: pointer;
       &:hover {
         background: linear-gradient(to right, $themeSecondary, $themeColor);
       }
       &:hover .icon i {
+        color: #fff;
+      }
+      &:hover p {
         color: #fff;
       }
       .icon {
@@ -256,8 +266,153 @@ header {
         }
       }
       h2 {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         font-weight: 100;
+        font-family: Noto Sans;
+      }
+      p {
+        color: #9597a2;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+// for animation the linear background-colors
+@keyframes opacityZeroToHero {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// the projects section
+.projects_section {
+  .projects_wrapper {
+    @include flex(center, center, stretch);
+    .single_project {
+      width: 400px;
+      height: 500px;
+      margin: 15px;
+      background-size: cover !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      @include flex(center, flex-end, stretch);
+      padding: 50px 0;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 500ms cubic-bezier(0.25, 0.1, 0.04, 1.01) !important;
+      &:hover {
+        background: linear-gradient(to bottom, #f9004fc9, #000000b2) !important;
+        animation: opacityZeroToHero 0.5s ease;
+        transform: scale(1.02);
+      }
+      .project_desc {
+        text-align: center;
+        padding: 0 50px;
+        p {
+          margin-bottom: 20px;
+          color: #9597a2;
+        }
+        h2 {
+          margin-bottom: 30px;
+          font-weight: 100;
+        }
+        .linked_button {
+          a {
+            color: #fff;
+            display: inline-block;
+            padding: 7px 30px;
+            border-radius: 5px;
+            border: 2px solid #9597a2;
+            transition: 0.3s;
+            &:hover {
+              background: $themeColor;
+              border-color: $themeColor;
+              box-shadow: 0 0 5px #101010;
+              transform: translateY(-3px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// the latest news section
+.latest_news_section {
+  .latest_news_content_wrapper {
+    @include flex(center, center, stretch);
+    .single_news {
+      width: 400px;
+      height: 500px;
+      margin: 15px;
+      position: relative;
+      background-position: center !important;
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
+      overflow: hidden;
+      border-radius: 5px;
+      cursor: pointer;
+      &:hover .overlay {
+        background: linear-gradient(to bottom, #f9004fdc, rgba(0, 0, 0, 0.836));
+        animation: opacityZeroToHero 0.5s ease;
+      }
+      &:hover .overlay .news_desc .news_button {
+        display: block;
+        animation: bottomToTop 0.5s ease;
+      }
+      @keyframes bottomToTop {
+        from {
+          transform: translateY(100%);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(
+          to bottom,
+          transparent,
+          transparent,
+          #000000f1
+        );
+        @include flex(center, flex-end, stretch);
+        .news_desc {
+          padding: 30px;
+          p {
+            color: #9597a2;
+            margin-bottom: 10px;
+          }
+          h2 {
+            font-weight: 100;
+          }
+          .news_button {
+            display: none;
+            margin-top: 20px;
+            a {
+              padding: 7px 20px;
+              color: #fff;
+              border: 2px solid $themeColor;
+              border-radius: 5px;
+              display: inline-block;
+              transition: 0.3s;
+              &:hover {
+                background: $themeColor;
+                border-color: $themeColor;
+                box-shadow: 0 0 5px #101010;
+                transform: translateY(-3px);
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -409,6 +564,37 @@ header {
     .service_content_wrapper {
       .single_service {
         margin: 5px 0;
+        width: 500px;
+        max-width: 95%;
+        padding: 50px 20px;
+      }
+    }
+  }
+
+  // the projects section
+  .projects_section {
+    .projects_wrapper {
+      .single_project {
+        max-width: 95%;
+        margin: 5px 0;
+        .project_desc {
+          padding: 0 15px;
+        }
+      }
+    }
+  }
+
+  // the news section
+  .latest_news_section {
+    .latest_news_content_wrapper {
+      .single_news {
+        max-width: 95%;
+        margin: 5px 0;
+        .overlay {
+          .news_desc {
+            padding: 30px 10px;
+          }
+        }
       }
     }
   }
